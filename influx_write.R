@@ -7,7 +7,7 @@ library(dplyr)
 # library(xts)
 
 
-con <- influx_connection(host = "192.168.178.48",user = "telegrafuser", pass = "telegrafuser")
+# con <- influx_connection(host = "192.168.178.48",user = "telegrafuser", pass = "telegrafuser")
 
 t1 = Sys.time()
 file_csv = "./Dati/Realtime/dati_lastweek.csv"
