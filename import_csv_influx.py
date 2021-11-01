@@ -33,5 +33,5 @@ for i in range(len(df)):
                         value=df.pioggia[i],
                         timestamp=df.unix_time[i]))
 
-client.write_points(data, database='writetest', time_precision='ns', batch_size=10000, protocol='line')
+client.write_points(data, database='writetest', time_precision='n', batch_size=10000, protocol='line')
 
