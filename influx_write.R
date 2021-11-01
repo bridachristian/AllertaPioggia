@@ -2,9 +2,9 @@ rm(list = ls())
 options(scipen=999)
 
 library(dplyr)
-library(stringr)
+# library(stringr)
 library(influxdbr)
-library(xts)
+# library(xts)
 
 
 con <- influx_connection(host = "192.168.178.48",user = "telegrafuser", pass = "telegrafuser")
