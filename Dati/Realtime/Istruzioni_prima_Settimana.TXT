@@ -1,0 +1,18 @@
+# ---------------------------------------------------------------------------- #
+# --- Istruzioni per la preparazione della prima settimana di dati storici --- #
+# --- per l'avvio del sistema automatico di allerta precipitazioni intense --- #
+# ---------------------------------------------------------------------------- #
+
+1. 	Dal portale http://storico.meteotrentino.it/web.htm cercare la stazione meteo interessata (t0360 passo tonale)
+
+2. 	Selezionare la variabile "Pioggia (millimetri)" dal menu' "Output Personalizzati"
+
+3. 	Serie 			-> "Ultimi 7 giorni"
+	Output 			-> "Download"
+	Intervallo dati -> "Tutte le misure" 
+	
+4. 	Aprire il file, convertire il csv da sep = "," -> ";", e decimal = "." -> "," (Dati, Testo in colonna, separatori, decimali)
+	Eliminare le righe 1,2,4 e le colonne C,D
+	Salvare come csv
+	
+5. Lanciare lo script First_week.py per ricampionare ogni 15 min e salvare nel file "last_week.csv"
