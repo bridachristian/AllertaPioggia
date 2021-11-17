@@ -6,7 +6,8 @@ library(dplyr)
 # library(influxdbr)
 # library(xts)
 
-
+getwd()
+setwd(getwd())
 # con <- influx_connection(host = "192.168.178.48",user = "telegrafuser", pass = "telegrafuser")
 
 t1 = Sys.time()
