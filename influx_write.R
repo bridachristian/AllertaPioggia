@@ -8,6 +8,10 @@ library(dplyr)
 
 getwd()
 setwd(getwd())
+
+print(paste("--- Start script: ", Sys.time(),"---"))
+print(paste("Script folder:", getwd()))
+
 # con <- influx_connection(host = "192.168.178.48",user = "telegrafuser", pass = "telegrafuser")
 
 t1 = Sys.time()
@@ -36,3 +40,6 @@ write("",file = output.file, append = TRUE)
 write.table(x = line, file = output.file,
             quote = FALSE,row.names = FALSE, col.names = FALSE,append = TRUE)
 close(output.file)
+
+print(paste("--- End script: ", Sys.time(),"---"))
+
