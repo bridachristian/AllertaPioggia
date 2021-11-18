@@ -13,9 +13,10 @@ print(paste("--- Start script: ", Sys.time(),"---"))
 print(paste("Script folder:", getwd()))
 
 # con <- influx_connection(host = "192.168.178.48",user = "telegrafuser", pass = "telegrafuser")
+dir =  getwd()
 
 t1 = Sys.time()
-file_csv = "./Dati/Realtime/dati_lastweek.csv"
+file_csv = paste(dir,"/Dati/Realtime/dati_lastweek.csv",sep="")
 
 data = read.csv(file_csv, stringsAsFactors = F,sep = ";",dec = ",",row.names = NULL)
 data$data = as.POSIXct(data$data, format = "%d/%m/%Y %H:%M", tz= "Etc/GMT-1")
