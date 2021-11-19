@@ -3,8 +3,10 @@ options(scipen=999)
 
 library(dplyr,quietly = T)
 
-getwd()
-setwd(getwd())
+dir =  "/home/ubuntu/git/AllertaPioggia" #linux dir
+
+# getwd()
+setwd(dir)
 
 print(paste("--- Start script: ", Sys.time(),"---"))
 print(paste("Script folder:", getwd()))
