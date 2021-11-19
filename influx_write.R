@@ -1,10 +1,7 @@
 rm(list = ls())
 options(scipen=999)
 
-library(dplyr)
-# library(stringr)
-# library(influxdbr)
-# library(xts)
+library(dplyr,quietly = T)
 
 getwd()
 setwd(getwd())
@@ -12,8 +9,8 @@ setwd(getwd())
 print(paste("--- Start script: ", Sys.time(),"---"))
 print(paste("Script folder:", getwd()))
 
-# con <- influx_connection(host = "192.168.178.48",user = "telegrafuser", pass = "telegrafuser")
-dir =  getwd()
+# dir =  getwd() #linux dir
+dir =  "/home/ubuntu/git/AllertaPioggia" #linux dir
 
 t1 = Sys.time()
 file_csv = paste(dir,"/Dati/Realtime/dati_lastweek.csv",sep="")
